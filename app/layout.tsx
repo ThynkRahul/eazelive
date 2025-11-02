@@ -1,5 +1,5 @@
 // app/layout.tsx
-import "../../styles/globals.css";
+import "../styles/globals.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "swiper/css";
 import "swiper/css/effect-cards";
