@@ -30,12 +30,12 @@ export function middleware(req: NextRequest) {
     locale => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
-  // Redirect to default locale if missing BUT allow root "/" to be default english
-if (!pathnameHasLocale && pathname !== "/") {
-  const url = req.nextUrl.clone();
-  url.pathname = `/${defaultLocale}${pathname}`;
-  return NextResponse.redirect(url);
-}
+  // Redirect to default locale if missing
+  if (!pathnameHasLocale) {
+    const url = req.nextUrl.clone();
+    url.pathname = `/${defaultLocale}${pathname}`;
+    return NextResponse.redirect(url);
+  }
 
   // Get locale from path
   const locale = getLocaleFromPath(pathname);
