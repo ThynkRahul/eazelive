@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import CanonicalURL from "../../components/CanonicalURL"; // assume server safe
 import Footer from "../../components/Footer"; // if client-only, we'll dynamic import below
 import dynamic from "next/dynamic";
-import NavSwitcher from "../../components/NavSwitcher"; // small client component we will add
+//import NavSwitcher from "../../components/NavSwitcher"; // small client component we will add
 
 // Dynamic imports for known client-only components (ssr: false ensures they load on client only)
 const CookieConsentBanner = dynamic(() => import("../../components/CookieConsentBanner"), {
