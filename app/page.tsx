@@ -1,6 +1,6 @@
 import Landing from "../components/Landing";
 import CanonicalURL from "../components/CanonicalURL";
-import NavBar from "../components/NavBar"
+import NavBar from "../components/Navbar"
 import Footer from "../components/Footer"
 import { Metadata } from "next";
 
