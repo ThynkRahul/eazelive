@@ -1,17 +1,13 @@
-import { getLandingTranslations } from '../../lib/translationHelper'
-import NavBar from '../../components/NavBar'
-import Footer from '../../components/Footer'
+// app/[lang]/layout.tsx
 
-export default async function LangLayout({ children, params }) {
+export default function LangLayout({ children, params }: { children: React.ReactNode, params: { lang: string } }) {
   const locale = params.lang;
-  const t = await getLandingTranslations(locale);
 
   return (
     <html lang={locale}>
       <body>
-        <NavBar locale={locale} navigation={t.navigation} />
+        {/* Nav + Footer will load translations inside themselves */}
         {children}
-        <Footer locale={locale} footer={t.footer} navigation={t.navigation}/>
       </body>
     </html>
   );
