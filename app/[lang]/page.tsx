@@ -1,6 +1,9 @@
 import Landing from "../../components/Landing";
 import CanonicalURL from "../../components/CanonicalURL";
 
+import NavBar from "../../components/NavBar"
+import Footer from "../../components/Footer"
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,7 +25,19 @@ export const metadata: Metadata = {
     google: "6LAck0ASlqXJ_cAT0c3qjx9-cQmgC1y0rMnJo11P7DU",
   },
 };
+
 export default function Home({ params }: { params: { lang: string } }) {
   const { lang } = params;
-  return <Landing locale={lang as string} />;
+
+  return (
+    <>
+      <NavBar locale={lang} />
+      <Landing locale={lang} />
+
+      {/* very important SEO component must be inside */}
+      <CanonicalURL />
+
+      <Footer locale={lang} />
+    </>
+  );
 }
