@@ -1,6 +1,6 @@
-import { getLandingTranslations } from "@/lib/translationHelper";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
+import { getLandingTranslations } from '../../lib/translationHelper'
+import NavBar from '../../components/NavBar'
+import Footer from '../../components/Footer'
 
 export default async function LangLayout({ children, params }) {
   const locale = params.lang;
