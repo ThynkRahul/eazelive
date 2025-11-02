@@ -1,5 +1,7 @@
 import Landing from "../components/Landing";
 import CanonicalURL from "../components/CanonicalURL";
+import NavBar from "../components/NavBar"
+import Footer from "../components/Footer"
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -23,5 +25,14 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return <Landing locale="en" />;
+  const lang = "en"; // default
+
+  return (
+    <>
+      <NavBar locale={lang} />
+      <Landing locale={lang} />
+      <CanonicalURL />
+      <Footer locale={lang} />
+    </>
+  );
 }
