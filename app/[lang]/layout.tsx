@@ -43,7 +43,7 @@ export default function LangLayout({
       <body>
         <CanonicalURL />
         {/* NavSwitcher is a client component that will use `usePathname()` to decide LandingNavBar vs NavBar */}
-        <NavSwitcher locale={lang} />
+        {/*<NavSwitcher locale={lang} />*/}
 
         <main>{children}</main>
 
